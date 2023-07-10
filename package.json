@@ -6,14 +6,7 @@
     "compile:views": "gulp bundle-views",
     "compile:locales": "gulp bundle-locales",
     "compile:sass": "gulp sass",
-    "compile:typescript": "gulp compile-typescript",
-    "watch:views": "nodemon --ext njk --watch app/views --exec \"npm run compile:views\"",
-    "watch:locales": "nodemon --ext yaml --watch app/locales --exec \"npm run compile:locales\"",
-    "watch:sass": "nodemon --ext scss --watch app/assets/stylesheets \"npm run compile:sass\"",
-    "watch:typescript": "nodemon --ext ts --watch app \"npm run compile:typescript\"",
-    "watch:all": "npm run watch:views & npm run watch:locales & npm run watch:sass & npm run watch:typescript",
-    "serve": "nodemon --ext js,njk,yaml,css --watch dist dist/server.js",
-    "dev": "npm run watch:all & npm run serve"
+    "compile:typescript": "gulp compile-typescript"
   },
   "dependencies": {
     "@dwp/govuk-casa": "8.11.0",
@@ -27,6 +20,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.4.0",
+    "@types/nodemon": "^1.19.2",
     "gulp": "^4.0.2",
     "gulp-typescript": "^6.0.0-alpha.1",
     "nodemon": "^3.0.1",
